@@ -76,9 +76,32 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+function uniquifyArray(wordsUnique) {
+  let uniqueArray = 0;
+  if (!wordsUnique.length) return null;
+
+  for(let i = 0; i < wordsUnique.length; i++){
+    if (uniqueArray.indexOf(wordsUnique[i]) === -1){
+      uniqueArray.push(wordsUnique[i]);
+    }
+    return uniqueArray;
+  }
+};
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+function doesWordExist(wordsFind, newWord) {
+  if (!wordsFind.length) return null;
+  let isFound = false;
+  
+  for (let i = 0; i < wordsFind.length; i++) {
+    if (newWord === wordsFind[i]) {
+      isFound = true;
+    } 
+    return isFound;
+  }
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
